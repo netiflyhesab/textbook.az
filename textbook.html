@@ -1,0 +1,2732 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="Website icon" href="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/link-hyperlink-icon.png">
+    <title>Link.az</title>
+
+    <style>
+        *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+body{
+  background-color: #303030;
+}
+nav{
+  position: fixed;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 750px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 750px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+   
+    
+}
+
+
+
+.kitab{
+    width: 200px;
+    height: 315px;
+    background: linear-gradient(120deg,#0559b2,#ca9809);
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: 15px;
+    margin-top: 40px;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.kitab1{
+    width: 170px;
+    height: 280px;
+    background: linear-gradient(20deg,#0559b2,#ca9809);
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: 15px;
+    margin-top: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+span{
+    font-size: 30px;
+}
+
+i{
+    margin: 10px;
+}
+
+.basliq{
+  font-size: 34px;
+  color: rgb(103, 173, 11);
+  
+}
+
+.bas{
+  text-align: center;
+}
+
+.resm{
+  background-image: url("https://www.abiturient.az/storage/projects/English_TT_1_az_2023.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 15px;
+  background-position: center;
+  background-size: cover;
+}
+.resm1{
+  background-image: url("https://eduroom.az/uploads/posts/2023-09/1694449147_mir_az-ekran-resmi-2023-09-09-19_19_14.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm2{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/1706701952_images.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left:30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm3{
+  background-image: url("https://eduroom.az/uploads/posts/2023-12/mir_az-ge-catalog-kitablar-dim-test_toplusu_kimya_2020-az_hisse2.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm4{
+  background-image: url("https://mir.az/uploads/posts/2023-12/Mir.az-screenshot_2023-12-08-16-45-29-85_2c052828f9bc068f981717dba52f469b.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 15px;
+  background-position: center;
+  background-size: cover;
+}
+.resm5{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/sddefault-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 15px;
+  background-position: center;
+  background-size: cover;
+}
+.resm6{
+  background-image: url("https://mir.az/uploads/posts/2023-10/Mir.az-english_tt_1_az_2023-1-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm7{
+  background-image: url("https://eduroom.az/uploads/posts/2023-12/photo_2022-02-10_05-57-04.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm8{
+  background-image: url("https://eduroom.az/uploads/posts/2024-04/3046cc8d28_ekran-resmi-2024-04-08-00_35_23.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm9{
+  background-image: url("https://eduroom.az/uploads/posts/2023-09/mir_az-ekran-resmi-2023-09-09-19_35_29.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 15px;
+  background-position: center;
+  background-size: cover;
+}
+.resm10{
+  background-image: url("https://www.kitabyurdu.org/uploads/posts/2021-06/1622538084_0001-1727250308_20210522_215254_0000.png");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 15px;
+  background-position: center;
+  background-size: cover;
+}
+.resm11{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:88669/wh:true/wi:800");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 15px;
+  background-position: center;
+  background-size: cover;
+}
+.resm12{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:198560/wh:true/wi:800");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 15px;
+  background-position: center;
+  background-size: cover;
+}
+.resm13{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:11842430/wh:true/wi:500");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 15px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm14{
+  background-image: url("https://iletisim.com.tr/Images/UserFiles/Images/Spot/kotu-kalp.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 15px;
+  background-position: center;
+  background-size: cover;
+}
+.resm15{
+  background-image: url("https://imgv2-1-f.scribdassets.com/img/document/677167027/original/133893721c/1723092856?v=1");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 15px;
+  background-position: center;
+  background-size: cover;
+}
+.resm16{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/mir_az-ekran-resmi-2024-01-10-17_43_06.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm17{
+  background-image: url("https://imgv2-1-f.scribdassets.com/img/document/629180519/original/c24a72e233/1719039693?v=1");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm18{
+  background-image: url("https://i.pinimg.com/736x/11/c7/b5/11c7b52d8f37e570ac9867ff94b6f11f.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm19{
+  background-image: url("https://eduroom.az/uploads/posts/2023-02/1672384156_mir_az-ekran-alintisi.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm20{
+  background-image: url("https://mir.az/uploads/posts/2024-07/93c00adb90_9786059585422_genc-sherlock.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm21{
+  background-image: url("https://i.pinimg.com/736x/11/c7/b5/11c7b52d8f37e570ac9867ff94b6f11f.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm22{
+  background-image: url("https://i.pinimg.com/736x/11/c7/b5/11c7b52d8f37e570ac9867ff94b6f11f.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm28{
+  background-image: url("https://mir.az/uploads/posts/2023-03/Mir.az-ekran-resmi-2023-03-03-21_40_19.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm29{
+  background-image: url("https://eduroom.az/uploads/posts/2023-06/mir_az-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm30{
+  background-image: url("https://qlobuskitab.az/wp-content/uploads/2023/08/20230812_191138.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm31{
+  background-image: url("https://eduroom.az/uploads/posts/2023-09/mir_az-ekran-resmi-2023-04-22-22_23_02.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm32{
+  background-image: url("https://kitabevim.az/wp-content/uploads/2023/08/photo_2023-08-12_16-20-04-7-1.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm33{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPN-csUxMcG4KyHKzcwMQTAFMt8GLzbwy9Wg&s");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm34{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/mir_az-ekran-resmi-2023-10-17-19_49_04.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm35{
+  background-image: url("https://kitablar.com/data/books/bk1361/cover.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm36{
+  background-image: url("https://eduroom.az/uploads/posts/2023-10/mir_az-959f8d8ce9422f156d38f50631.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm37{
+  background-image: url("https://static.nadirkitap.com/fotograf/226982/7/Kitap_20161124023245_226982_3.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm38{
+  background-image: url("https://i.dr.com.tr/cache/600x600-0/originals/0000000056574-1.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm39{
+  background-image: url("https://m.media-amazon.com/images/I/41df2cdc+1L._AC_UF1000,1000_QL80_.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm41{
+  background-image: url("https://static.insales-cdn.com/images/products/1/4002/759852962/large_0000000688769-1.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm42{
+  background-image: url("https://mir.az/uploads/posts/2024-08/38d4a7a425_kitablarmiraz-13.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm43{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:11650808/wh:true/miw:200/mih:200");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm44{
+  background-image: url("https://eduroom.az/uploads/posts/2023-12/1702026790_cografiya_tt_1_az_2023.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm45{
+  background-image: url("https://mir.az/uploads/posts/2022-12/Mir.az-ge-catalog-kitablar-dim-test_toplusu_cografiya_2020-az_hisse2.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm46{
+  background-image: url("https://eduroom.az/uploads/posts/2024-03/1710385721_indir-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm47{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/1705774913_hqdefault.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm48{
+  background-image: url("https://eduroom.az/uploads/posts/2023-12/1702766571.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm54{
+  background-image: url("https://mir.az/uploads/posts/2023-10/1697536810_Mir.az-ekran-resmi-2023-10-17-13_58_25.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm55{
+  background-image: url("https://eduroom.az/uploads/posts/2024-08/abit_n2-az_2024.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm56{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:11077239/wh:true/wi:800");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm57{
+  background-image: url("https://eduroom.az/uploads/posts/2024-02/mir_az-ekran-resmi-2024-02-08-12_23_53.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm58{
+  background-image: url("https://eduroom.az/uploads/posts/2023-10/1674229792_mir_az-2406e39b4d7dd8101ce49b8185.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm59{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/biologiya_tt_1_az_2023.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm60{
+  background-image: url("https://mir.az/uploads/posts/2024-02/Mir.az-ekran-resmi-2024-02-22-21_28_51.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm61{
+  background-image: url("https://mir.az/uploads/posts/2022-10/1665734007_Mir.az-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm62{
+  background-image: url("https://mir.az/uploads/posts/2022-12/Mir.az-photo-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm63{
+  background-image: url("https://mir.az/uploads/posts/2022-12/Mir.az-31fad3b9c0cdccbd33c91c87fb.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm65{
+  background-image: url("https://mir.az/uploads/posts/2024-08/ea14a10fc9_1644327448_3.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm66{
+  background-image: url("https://mir.az/uploads/posts/2024-08/5188c217d9_0002094558001-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm67{
+  background-image: url("https://imgv2-2-f.scribdassets.com/img/document/629486316/original/6eabb88672/1716355128?v=1");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm68{
+  background-image: url("https://eduroom.az/uploads/posts/2023-09/photo_2023-04-25_07-45-32.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm69{
+  background-image: url("https://kitabevim.az/wp-content/uploads/2022/11/photo_2022-11-27_23-01-53.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm76 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEjv1R2YO6f8eyJqxGACEPzDoo3POVpDhA5g&s");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm77{
+  background-image: url("https://www.e-derslik.edu.az/cache/599b70289b3e713d0304c4739f2e4e0b_316_430.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm78{
+  background-image: url("https://www.trims.edu.az/cache/00155cc05e6f12b8a2834ec8eb484cfd_400_564.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm79{
+  background-image: url("https://www.trims.edu.az/cache/8e9e651c0f9fc54fc12fb3a86b660ca6_400_557.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm80{
+  background-image: url("https://eduroom.az/uploads/posts/2023-09/1671204723_mir_az-photo.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm81{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/azedu_az_dimkitabb_512.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm81{
+  background-image: url("https://www.trims.edu.az/cache/00155cc05e6f12b8a2834ec8eb484cfd_400_564.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm82{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjZRfb4xn3nw2hoFcl2PRcCPdrmlQtdBE1MA&s");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm83{
+  background-image: url("https://www.abiturient.az/storage/projects/az-dili_2024-11_11illik.jpeg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm84{
+  background-image: url("https://eduroom.az/uploads/posts/2024-11/14718c591a_ingilis-9_20sinaq_07-112024-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm85{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2UnQeoblh4GwngxrLWyPo6B2YGmbhazAmZA&s");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.text{
+  color: #f2f2f2;
+  margin-top: 25px;
+}
+
+.nov{
+  color: blue;
+  font-size: 14px;
+  margin: 10px;
+}
+
+button{
+  font-size: 15px;
+  padding: 1px 15px;
+  border-radius: 10px;
+  background: linear-gradient(120deg,#0559b2,#ca9809);
+  
+}
+
+.but:hover{
+  background-color: black;
+  color: #fff;
+  
+  transition: 0.5s;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+a:hover{
+  
+  color: #fff;
+  transition: 0.5s;
+  
+}
+
+@media only screen and (max-width: 760px){
+            .content{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                width: 100%;
+                
+                
+       }
+}
+
+
+
+@media only screen and (max-width: 760px){
+            .kitab{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab1{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab2{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab3{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab4{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab5{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab6{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm1{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm2{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm3{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm4{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm5{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm6{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm7{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm8{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm9{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm10{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm11{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm12{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm13{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm14{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm15{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm16{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm17{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm18{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm19{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm20{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm21{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm23{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm24{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm25{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm26{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm27{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm22{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm28{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm29{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm30{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm31{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm32{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm33{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm34{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm35{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm36{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm37{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm38{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm39{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm40{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm41{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm42{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm43{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm44{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm45{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm46{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm47{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm48{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm54{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm55{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm56{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm57{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm58{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm59{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm60{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm61{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm62{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm63{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm65{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm66{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm67{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm68{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm69{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm76{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm77{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm78{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm79{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm80{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm81{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm81{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm82{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm83{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm84{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm85{
+                margin-left: 5px;
+       }
+}
+
+@media only screen and (max-width: 760px){
+            .kitab1{
+              width: 200px;
+       }
+}
+
+#find{
+  font-size: 25px;
+  border: none;
+  border-bottom: solid 0.5px #fff;
+  width: 100%;
+  background-color: #303030;
+  color: white;
+  
+}
+
+#ss{
+  font-size: 25px;
+  color: #fff;
+}
+
+.onerilen{
+  display: flex;
+  width: 100%;
+  overflow-x: scroll ;
+  height: 353px;
+}
+  
+  .search{
+    display: flex;
+
+  }
+h2{
+  color: red;
+}
+
+.abt{
+    font-size: 19px;
+    color: yellow;
+   
+    margin-top: 10px;
+    
+    border-radius: 20px;
+    padding: 15px 20px;
+   
+    display:flexbox;
+
+
+}
+.about{
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    background: linear-gradient(100deg,#0559b2,#ca9809);
+    border-radius: 30px;
+   
+    
+    
+    
+}
+
+.about:hover{
+            transform: translateY(-280px);
+            transition: 0.8s;
+            background: linear-gradient(100deg,#0559b2,#ca9809);
+            height: 700px;
+            border-radius: 30px;
+
+            
+}
+.mel{
+  font-size: 16px;
+  color: yellow;
+}
+
+
+
+/*language*/
+
+#lang{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 12px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+}
+
+#lg{
+   
+    position: fixed;
+    bottom: 67px;
+    left: 20px;
+    background: linear-gradient(100deg,#0559b2,#ca9809);
+    border-radius: 10px;
+    color: white;
+    
+   display: none ;
+}
+li{
+    list-style: none;
+    padding: 16px 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+.es:hover{
+    
+    background-color: #343c40;
+    transition: 0.3s;
+}
+img{
+    width: 16px;
+    border-radius: 100%;
+    height: 16px;
+}
+.a{
+    color: white;
+    font-weight: bold;
+}
+
+/*chatbot*/
+
+
+.chat-header a{
+    text-decoration:none;
+    color: white;
+}
+
+.copyright{
+    font-size:12px;
+    text-align: center;
+}
+
+.copyright a {
+    text-decoration:none;
+    color: #343c41;
+}
+.i{
+  font-size: 23px;
+}
+#chatbot-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 9px 7px;
+    border: none;
+    background-color: #1087FF;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001; /* Ensure the button is above the chatbot popup */
+}
+
+
+
+.chatbot-popup {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: #303030;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 90%;
+    z-index: 1000;
+}
+
+.chat-header {
+    background-color: black;
+    color: #fff;
+    padding: 15px 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#close-btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-box {
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 15px 20px;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+}
+
+#user-input {
+    font-family: "Poppins";
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+}
+
+#send-btn {
+    font-family: "Poppins", sans-serif;
+    padding: 10px 20px;
+    border: none;
+    background-color: #1087FF;
+    color: #fff;
+    border-radius: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: #0074CC;
+}
+
+.user-message {
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 14px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 10px; /* Push user message to the left */
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; /* Move user message to the right */
+}
+
+.user-message::before {
+    
+    position: absolute;
+    bottom: -17px;
+    right: -20px;
+    margin-bottom: 7px;
+    font-size: 20px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.bot-message {
+    background-color: black;
+    color: #fff;
+    padding: 14px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    align-self: flex-start; /* Move bot message to the left */
+    margin-right: 10px; /* Push bot message to the right */
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Adjust for button placement */
+}
+
+.bot-message::before {
+    
+    width: 20px;
+    position: absolute;
+    bottom: -17px;
+    left: -14px;
+    margin-bottom: 4px;
+    font-size: 20px;
+    background-color: #1087FF;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.button-container button {
+    padding: 10px 50px;
+    border: none;
+    background-color: #1087FF;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #0074CC;
+}
+</style>
+
+</head>
+<body>
+    <nav>
+        <div class="logo"><i class="fa-solid fa-link"></i>Link.az</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li><a  href="">Home</a></li>
+          <li><a class="active" href="#">Textbook</a></li>
+          <li><a href="">Novels</a></li>
+          <li><a href="">Contact</a></li>
+          
+        </ul>
+    </nav>
+    <br>
+      
+    <br>
+    <br> 
+      <br>
+      <br>
+      <div class="bas">
+      <span class="basliq">
+       Oxumaq azadlığa uçmaqdır!
+      </span>
+      </div>
+      <br>
+      <h2>
+        <i class="fa-solid fa-fire"></i>Önərilənlər
+      </h2>
+      <div class="onerilen">
+        <div class="kitab1">
+          <div class="resm">
+
+          </div>
+          <div class="text">
+            <h5>English Dim Toplu  I hissə 2023</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/MdoAQbaC#3xGc_49cZWgyYAWvh0pXLlTStmY2T5fHPk-DPhmUZ4o" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+        </div>
+
+          
+        <div class="kitab1">
+          <div class="resm4">
+
+          </div>
+          <div class="text">
+            <h5>Riyaziyyat Dim Toplu II hissə 2023</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/BApwyR7R#bx9BEJo9vaXe4Byg59Pu3aRTqwDkkg6Q-iR-_ASK8d8" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+        </div>
+
+        <div class="kitab1">
+          <div class="resm5">
+
+          </div>
+          <div class="text">
+            <h5>İnformatika Dim Toplu 2023</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/ARBwHCYS#KpL_PaAJLXjd13B7-PDQtzheHtBoXxXMzAho7N8lNqg" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+        </div>
+
+        <div class="kitab1">
+          <div class="resm9">
+
+          </div>
+          <div class="text">
+           <h5>Fizika Dim Toplu I hissə 2023</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/NZR0iRzL#OFexuRDkmqZZzudmO5zhyPkRmWgHC2dqie8EsYAFkyg" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+        </div>
+          
+  
+        <div class="kitab1">
+          <div class="resm15">
+
+          </div>
+          <div class="text">
+           <h5>Azərbaycan Dim Toplu I hissə 2023</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/MBpVgQbC#Gz7leJIRMfjLDM7n-dHcH4MVkjtMIpDniJ0_KDRZAXs" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+        </div>
+          
+
+      </div>
+
+      <br><br><div class="search"><i id="ss" class="fa-solid fa-magnifying-glass"></i><input type="text" name="" id="find" placeholder="Kitab axtar..." onkeyup="search()"></div>
+      <div class="content">
+        
+        <div class="kitab">
+          <div class="resm2">
+
+          </div>
+          <div class="text">
+            <h5>Fizika Dim Toplu II hissə 2023</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/wZpGiahZ#UaLxN8LD6xYcoSkWQ2Z8jjMfzccLZjA3NdYEMKhOX88" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Toplulara DİM tərəfindən  və imtahanlarda istifadə edilmiş test modelləri daxildir.Hər topludakı test tapşırıqlarının 25% heç bir imtahanda istifadə olunmamış tapşırıqlar təşkil edir. </span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm3">
+
+          </div>
+          <div class="text">
+            <h5>Kimya Dim Toplu II hissə 2019</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/UJpxhTbY#Nf0tZcHRznnAVGa5DZlxO-s2bNiDa8w9buzthnOuYoI" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Toplulara DİM tərəfindən  və imtahanlarda istifadə edilmiş test modelləri daxildir.Hər topludakı test tapşırıqlarının 25% heç bir imtahanda istifadə olunmamış tapşırıqlar təşkil edir. </span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm54">
+
+          </div>
+          <div class="text">
+            <h5>English<br>Grammar In Use</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/1RwgjRzR#1wF2Q3y55pHbhqK2qBrLo_v0uwg65bEODtUkF3zkqrQ" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>Bu, sadə izahatlar və çoxlu təcrübə tapşırıqları ilə öz öyrənmə kitabıdır və dünyada milyonlarla insanın ingilis dilində ünsiyyət qurmağında kömək edib. </h5></span>
+          </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm55">
+
+          </div>
+          <div class="text">
+            <h5>Abituriyent 2 Tələbə qəbulu</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/sM5CCLaZ#ufgt15EsjtU0PFJXqwZORC3PAh3JOKUm7keBFR_zSSI" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>Əvvəlki illərdə qəbulu müsabiqəsində ixtisaslar üzrə formalaşmış keçid balları ixtisas seçimi zamanı sizə düzgün istiqamət götürməkdə kömək edə bilər.</h5></span>
+          </div>
+        </div>
+
+      
+
+        <div class="kitab">
+          <div class="resm57">
+
+          </div>
+          <div class="text">
+            <h5>Fizika Dim<br>nəzəriyyə</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/RRRQCTQA#GGuT7zPV8WEyuE4ZAbzfkWK7WScwwsRAaMxGgzZn6p0" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>Yeni təhsil proqramı (kurikulum) üzrə imtahana hazırlaşanlar, yuxarı sinif şagirdləri və müəllimlər üçün "Fizika" dərs vəsaiti.</h5></span>
+          </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm58">
+
+          </div>
+          <div class="text">
+            <h5>Biologiya<br>Güvən</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/VQ41RCgR#NLVrHHzyH86WebNoRPs6jiR2ThsF58yxKaAWrwG6ISg" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>Dərs materiallarının öyrənilməsini asanlaşdırmaq, bilikləri sistemləşdirmək məqsədilə çoxlu sayda şəkil, sxem, qrafik və cədvəllərdən istifadə olunmuşdur.</h5></span>
+          </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm61">
+
+          </div>
+          <div class="text">
+            <h5>TAİM Biologiya Dərs Vəsaiti</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/NRp2VK5T#SayGRDgxfE4vg2au0zvJi-_X2btkoZTzwIdVz79wWgg" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Biologiya dərsliyini əhatə edən nəzəriyyə toplusu.</span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm76">
+
+          </div>
+          <div class="text">
+            <h5>Coğrafiya<br>8ci sinif</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/FcZUCKaL#Uz5BX2wf-Nt2p5Hpsxm8diJBpKJAPhki6ScwiH0K_gw" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Coğrafiya Dərslik (8ci sinif)</span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm77">
+
+          </div>
+          <div class="text">
+            <h5>Coğrafiya<br>6cı sinif</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/INxFjJwL#zFyCJcFQV0RTItxC71mMm_XjKPQ3EGjQTVvJoYK3RuY" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Coğrafiya Dərslik (6cı sinif)</span>
+      </div>
+        </div>
+        <div class="kitab">
+          <div class="resm78">
+
+          </div>
+          <div class="text">
+            <h5>Coğrafiya<br>10cu sinif</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/AFREATDS#raQa_pb1sIGMZ_EWhy1yFwpcInv8s7n1FgR212tXInY" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Coğrafiya Dərslik (10cu sinif)</span>
+      </div>
+        </div>
+        <div class="kitab">
+          <div class="resm79">
+
+          </div>
+          <div class="text">
+            <h5>Coğrafiya<br>11ci sinif</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/oJZXGSIJ#iblPmx1QsxsAhoT2Fo1GclF_omy3JghkL_QLUvkge3g" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Coğrafiya Dərslik (11ci sinif)</span>
+      </div>
+        </div>
+        <div class="kitab">
+          <div class="resm80">
+
+          </div>
+          <div class="text">
+            <h5>Coğrafiya<br>Güvən 2022</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/gZ5DRJzB#of_pz7TN_kY64pr9PDdxOe2sssdtrntsG-4ZdKtqcyw" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Coğrafiya Güvən Nəzəriyyə 2022</span>
+      </div>
+        </div>
+        <div class="kitab">
+          <div class="resm81">
+
+          </div>
+          <div class="text">
+            <h5>İnformatika<br>Dim 2022</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/IN43nQrK#PFynepBKlG4eMuLMGD0j9lbs3N2hLnjbnF9yyq8ZUAU" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">İnformatika Dim 2022 II nəşr</span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm62">
+
+          </div>
+          <div class="text">
+            <h5>Kimya Güvən<br>Nəzəriyyə</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/0NoG2IrA#Z0bidnnkQGzWrz8mQeXbiuWyip05ccDTDnIj-GmCj4U" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Güvən "Kimya Nəzəriyyələr Toplusu"</span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm59">
+
+          </div>
+          <div class="text">
+            <h5>Biologiya Dim<br>I hissə</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/UNwgQI5A#PZAg7qyKrFRh48UQJxZ6eaFt-UuUcSKADhCZEylC2rI" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>Toplulara DİM tərəfindən və imtahanlarda istifadə edilmiş test modelləri daxildir.Hər topludakı test tapşırıqlarının 25% heç bir imtahanda istifadə olunmamış tapşırıqlar təşkil edir.</h5></span>
+          </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm60">
+
+          </div>
+          <div class="text">
+            <h5>Riyaziyyat Test Bankı</h5>
+          </div>
+          <div class="nov">
+            Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/ZQJG0L5A#1PMo_utRiqLEI_5m7wSHTeolLbxfeTEK_HBRpD4HeLg" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>Sizi əmin edirik ki, əlinizdəki bu kitab çox dəyərli bir mənbədir, yalnız ondan səmərəli şəkildə faydalanmaq lazımdır.</h5></span>
+          </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm44">
+
+          </div>
+          <div class="text">
+            <h5>Coğrafiya toplu I<br>hissə 2023</h5>
+          </div>
+          <div class="nov">
+           Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/0IYVBZLI#jgg5hxIkurJGztgeTjb68g2qVe1lLqR7io_spnMzs30" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Toplulara DİM tərəfindən  və imtahanlarda istifadə edilmiş test modelləri daxildir.Hər topludakı test tapşırıqlarının 25% heç bir imtahanda istifadə olunmamış tapşırıqlar təşkil edir. </span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm45">
+
+          </div>
+          <div class="text">
+            <h5>Coğrafiya toplu II hissə 2019</h5>
+          </div>
+          <div class="nov">
+           Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/8FhEXK7J#rc2CTm7LqWKB14hWE4NWlHZzifsO_mg2V5FVXHGk4OM" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Toplulara DİM tərəfindən  və imtahanlarda istifadə edilmiş test modelləri daxildir.Hər topludakı test tapşırıqlarının 25% heç bir imtahanda istifadə olunmamış tapşırıqlar təşkil edir. </span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm46">
+
+          </div>
+          <div class="text">
+            <h5>Tarix Dim toplu I hissə 2023</h5>
+          </div>
+          <div class="nov">
+           Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/QdZmUaRA#8e90krclEcw-afzKlOOpjjyms97ukCwGlHJZ5vLi_AY" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Toplulara DİM tərəfindən  və imtahanlarda istifadə edilmiş test modelləri daxildir.Hər topludakı test tapşırıqlarının 25% heç bir imtahanda istifadə olunmamış tapşırıqlar təşkil edir. </span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm47">
+
+          </div>
+          <div class="text">
+            <h5>Tarix Dim toplu II hissə 2023</h5>
+          </div>
+          <div class="nov">
+           Dərslik
+          </div>
+          <button class="but"><a href="https://mega.nz/file/IYwgzJRR#FLuEozW9gWNHPRaKwPBy61MOj-whdlam1eLmMskNOB0" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Toplulara DİM tərəfindən  və imtahanlarda istifadə edilmiş test modelləri daxildir.Hər topludakı test tapşırıqlarının 25% heç bir imtahanda istifadə olunmamış tapşırıqlar təşkil edir. </span>
+      </div>
+        </div>
+    
+    
+    <div class="kitab">
+      <div class="resm7">
+
+      </div>
+      <div class="text">
+        <h5>Nərgiz Nəcəf 2022 100 sınaq</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/xBwiFCAb#Z3WyIkPlP3D4FG2otxlwqPusBP3e8CG_LsF1K-LE1Vw" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Nərgiz Nəcəf "Sınaqlar Toplusu 2022"</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm6">
+
+      </div>
+      <div class="text">
+        <h5>English Toplu II hissə 2023</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/5R4kjTJB#QMaygTDXm5m4Khu6wPQHzw4noUtFeCpvQkbZELZtmRg" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Toplulara DİM tərəfindən  və imtahanlarda istifadə edilmiş test modelləri daxildir.Hər topludakı test tapşırıqlarının 25% heç bir imtahanda istifadə olunmamış tapşırıqlar təşkil edir. </span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm29">
+
+      </div>
+      <div class="text">
+        <h5>Riyaziyyat<br>Güvən 2021</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/dEZg0b6I#nFIBU4dgKXFxKMh9kNKGaIsISuvsxqfpV1dnqrjZGoQ" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Güvən "Riyaziyyat Tapşırıqlar Toplusu 2021"</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm30">
+
+      </div>
+      <div class="text">
+        <h5>Kimya Güvən<br>Test 2023</h5>
+      </div>
+      <div class="nov">
+       Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/8IgEhZ6J#ugTc-sX2VmNgePQPIavtPEh5Fq7GUasq9vezTIExdsY" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Güvən "Kimya Tapşırıqlar Toplusu 2023"</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm31">
+
+      </div>
+      <div class="text">
+        <h5>İnformatika<br> Güvən 2023</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/QZgQGZxZ#hw9YMbARYWQ5haCBOirEqOshRi7cI05PZbE-sFFe5iw" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Güvən "İnformatika Tapşırıqlar Toplusu 2023"</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm32">
+
+      </div>
+      <div class="text">
+        <h5>English Güvən<br> 2023</h5>
+      </div>
+      <div class="nov">
+       Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/5MQHyaIZ#EY-NKZQu6zaLJJU4qKPGjGPOfpku_VqyZK6TIWfAEHc" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Güvən "English Tapşırıqlar Toplusu 2023"</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm67">
+
+      </div>
+      <div class="text">
+        <h5>Nərgiz Nəcəf<br>250 sınaq</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/hdhhCIwJ#sT6cFoRdFHFJE415Wmim333tTon5UjFRjfiy5hYIrqE" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Nərgiz.R.Nəcəf Sınaq toplusu 2022</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm68">
+
+      </div>
+      <div class="text">
+        <h5>İPG<br>İnformatika 2023</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/MFg22axa#wUR0SPP6ETZtiTzDi5x5u6EUqCDmcbWixPvVK3HNUHE" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">İnformatika Abituriyentlər üçün test toplusu 2023</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm69">
+
+      </div>
+      <div class="text">
+        <h5>R.Resulov <br> İnformatika</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/RUQGhR4K#HtiiYfbHqv6kx0OL7fj4Dh8J_5w2n9ZRzhlEattcffo" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">İnformatika Abituriyentlər üçün Test Bankı</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm33">
+
+      </div>
+      <div class="text">
+        <h5>Azərbaycan Dili<br>Hədəf</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/cc4hXSbD#dYVr_5UgSuUdlb9g_gfaZb-hoo8IB7YmMmemD43ZxcE" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Azərbaycan dili dərs vəsaiti, imtahana hazırlaşan yuxarı sinif tələbələri və müəllimlər üçün xüsusi hazırlanmış bir kitabdır.</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm34">
+
+      </div>
+      <div class="text">
+        <h5>Fizika-Dim Landau school</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/FBQlyIRR#TCm1gFxJ5hBP4AjI4LhS-YGz_YaYjwdeOD5EZuA5pPs" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Fizika dərs vəsaiti, imtahana hazırlaşan yuxarı sinif tələbələri və müəllimlər üçün xüsusi hazırlanmış bir kitabdır.</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm35">
+
+      </div>
+      <div class="text">
+        <h5>Azərbaycan dili<br>Dərslik</h5>
+      </div>
+      <div class="nov">
+       Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/AIBHCQCD#NIU3oL1P7hKtDjzoJ2wLkSMS7Qg1wCcAh_1S3tfN8r4" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Azərbaycan dili dərsliyini əhatə edən nəzəriyyə toplusu.</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm63">
+
+      </div>
+      <div class="text">
+        <h5>G.Umudova<br>Test bankı</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/JMpFxTYK#_-42U_7gUfemQXRh3oeN6w8oeFLaXS7CCGiURCUvlSc" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel"><h5>Dərslik Azərbaycan Respublikası Təhsil Nazirliyi və Dövlət İmtahan Mərkəzinin təsdiq etdiyi proqram və dərsliklər əsasında hazırlanmışdır.</h5></span>
+      </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm36">
+
+      </div>
+      <div class="text">
+        <h5>Azərbaycan dili<br>Güvən</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/QYAVWbaI#FYTZs2Y3p5A-tSHIZySu42n_pO_reYfaBjedxaOg5wc" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Güvən "Azərbaycan dili Qaydalar Toplusu "</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm8">
+
+      </div>
+      <div class="text">
+        <h5>Riyaziyyat<br>Güvən</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/xFhTgQga#glrYZdp0MsmGmVqrvOSHVsPyLswWJqE2g9UY7Xsh1ck" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Güvən "Riyaziyyat Tapşırıqlar Toplusu"</span>
+  </div>
+    </div>
+
+
+    <div class="kitab">
+      <div class="resm16">
+
+      </div>
+      <div class="text">
+       <h5>Azərbaycan Dim  II hissə 2023</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/9ZZmWYgZ#uQ1WjPTAf69rqhuczqlZP9y0NiUbzSWpKuT8YXh7cyo" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Toplulara DİM tərəfindən  və imtahanlarda istifadə edilmiş test modelləri daxildir.Hər topludakı test tapşırıqlarının 25% heç bir imtahanda istifadə olunmamış tapşırıqlar təşkil edir. </span>
+  </div>
+    </div>
+
+    
+
+    <div class="kitab">
+      <div class="resm17">
+
+      </div>
+      <div class="text">
+       <h5>Fizika Güvən <br>2022</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/ZUZX1JAL#kBjRPfSCIxo0JJzS5LUG74uQUIeUHksKBTYpGdBDPFc" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Güvən "Fizika Tapşırıqlar Toplusu 2022"</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm18">
+
+      </div>
+      <div class="text">
+       <h5>Kimya Dim Toplu I hissə 2023</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/BZJG0KwI#sNjpPmsTIqUgU-RKF2iDupok2-ELUMslLkXXn9t6vt0" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Toplulara DİM tərəfindən  və imtahanlarda istifadə edilmiş test modelləri daxildir.Hər topludakı test tapşırıqlarının 25% heç bir imtahanda istifadə olunmamış tapşırıqlar təşkil edir. </span>
+  </div>
+    </div>
+
+    
+
+    <div class="kitab">
+      <div class="resm19">
+
+      </div>
+      <div class="text">
+       <h5>Nərgiz Nəcəf siniflər lüğəti</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/VJZTnAxa#SHva65Z5n8p-qoSQyDi-AWHK8r42QxxzhX99jJob948" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Nərgiz Nəcəf "İngilis dili - 9,10,11 siniflər - lüğət</span>
+  </div>
+    </div>
+    <div class="kitab">
+      <div class="resm48">
+
+      </div>
+      <div class="text">
+       <h5>RM-English dinləmə və oxu </h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/hFhHlYgL#JNwSjZbOop_9bbC3oSw7CverovxUB2nPeZ3tmXPuSzc" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Buraxılış imtahanlarına hazırlaşanlar üçün vəsait IX, X, XI siniflər üçün(2023)</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm1">
+
+      </div>
+      <div class="text">
+       <h5>Riyaziyyat Toplu I hissə 2023</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/IRxxEZAZ#GnJU1giHrZocoEZ5z63NLCIP9nW40Oe5j4S6qUXKcSE" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Toplulara DİM tərəfindən  və imtahanlarda istifadə edilmiş test modelləri daxildir.Hər topludakı test tapşırıqlarının 25% heç bir imtahanda istifadə olunmamış tapşırıqlar təşkil edir. </span>
+  </div>
+    </div>
+    <div class="kitab">
+      <div class="resm82">
+
+      </div>
+      <div class="text">
+       <h5>Riyaziyyat<br>20 Sınaq </h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/EQBSEYDY#jD_hpV47FbMA08aerSvBs6lrAVy5zG3oP3YGeWLtOus" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Buraxılış imtahanlarına hazırlaşanlar üçün vəsait XI sinif sınaqları.</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm83">
+
+      </div>
+      <div class="text">
+       <h5>Azərbaycan dili<br>20 sınaq</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/5YRGjDjY#KAuvNZWKqg0y4qNGhINxIBMLsxVma2vu7mhtczLP4IU" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Buraxılış imtahanlarına hazırlaşanlar üçün vəsait XI sinif sınaqları.</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm84">
+
+      </div>
+      <div class="text">
+       <h5>İngilis dili<br>20 sınaq</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/DV8UwSZI#Dn17S2Y7xGItHEQSi6x_lslmW0mWjSqoTuThALtkQ3k" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Buraxılış imtahanlarına hazırlaşanlar üçün vəsait XI sinif sınaqları.</span>
+  </div>
+    </div>
+
+    <div class="kitab">
+      <div class="resm85">
+
+      </div>
+      <div class="text">
+       <h5>Codera<br>(informatika)</h5>
+      </div>
+      <div class="nov">
+        Dərslik
+      </div>
+      <button class="but"><a href="https://mega.nz/file/ydMkBCgZ#TWGnCA9M0318RUQ9mAXTmOwkQkQhcZou7m5EIP5IQI4" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+      <div class="about">
+        <span class="abt">About</span><br><span class="mel">Blok imtahanlarına hazırlaşanlar üçün vəsait, informatika testləri.</span>
+  </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <button id="lang" onclick="hide()"><img src="https://aztc.gov.az/uploads/flag.jpg"><b>    AZE</b></button>
+        <div id="lg">
+            <div class="diller">
+                <li class="es"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/2560px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"><a href="" class="a"<b>     ENG</b></a></li>
+              
+            </div>
+        </div>
+
+  <button id="chatbot-toggle-btn"><i class="fas fa-link"></i></button>
+  <div class="chatbot-popup" id="chatbot-popup">
+      <div class="chat-header">
+          <span>Link.az</a></span>
+          <button id="close-btn">&times;</button>
+      </div>
+      <div class="chat-box" id="chat-box"></div>
+      <div class="chat-input">
+          <input type="text" id="user-input" placeholder="Type a message...">
+          <button id="send-btn">Send</button>
+      </div>
+
+  
+    
+   
+
+    
+
+
+            
+            
+           
+    
+      <script type="text/javascript">
+        function search() {
+        let filter = document.getElementById('find').value.toUpperCase();
+        let item = document.querySelectorAll('.kitab');
+        let l = document.getElementsByTagName('h5');
+        for(var i = 0;i<=l.length;i++){
+        let a=item[i].getElementsByTagName('h5')[0];
+        let value=a.innerHTML || a.innerText || a.textContent;
+        if(value.toUpperCase().indexOf(filter) > -1) {
+        item[i].style.display="";
+        }
+        else
+        {
+        item[i].style.display="none";
+        }
+        }
+        }
+
+
+
+
+
+         //language
+
+         function hide() {
+          var x = document.getElementById("lg")
+          if(x.style.display ==="block"){
+            x.style.display = "none";
+          }
+          else{
+            x.style.display = "block";
+          }
+        }
+
+
+
+         //chatbot
+
+         const responses = {
+   "hi": "Hello! How can I help you today?",
+    "hello": "Hello! How can I help you today?",
+    "coding hubs": "Here you will get Notes, Ebooks, project source Code, Interview questions. visit Coding Hubs.<a href='https://thecodinghubs.com' target='_blank'>Visit Website</a>",
+    "how are you": "I'm just a robot, but I'm here to help you!",
+    "help": "How can I help you today?",
+    "thank": "Goodbye! Have a nice day!",
+    "thank you": "Goodbye! Have a nice day!",
+    "bye": "Goodbye! Have a nice day!",
+    "default": "Sorry, I didn't understand it, please write in English",
+    "No": "Well, if you change your mind, let me know!",
+    "how can i download books": "A very simple! click of the 'yüklə' button",
+     "how can ı download books": "A very simple! click of the 'yüklə' button",
+     "how ı download books": "A very simple! click of the 'yüklə' button",
+     "how to download books": "A very simple! click of the 'yüklə' button",
+     "download books": "A very simple! click of the 'yüklə' button",
+     "download book": "A very simple! click of the 'yüklə' button",
+     "download": "A very simple! click of the 'yüklə' button",
+     "downloads": "A very simple! click of the 'yüklə' button",
+     "how to download book": "A very simple! click of the 'yüklə' button",
+     "how ı download book": "A very simple! click of the 'yüklə' button",
+     "how can ı download book": "A very simple! click of the 'yüklə' button",
+     "how  i download books": "A very simple! click of the 'yüklə' button",
+     "how download": "A very simple! click of the 'yüklə' button",
+     "Who was the creator?": "Farid Mammadli",
+     "who is creator": "Farid Mammadli",
+     "creator?": "Farid Mammadli",
+     "creator": "Farid Mammadli",
+     "who is creator?": "Farid Mammadli",
+     "who creator?": "Farid Mammadli",
+     "who is he?": "Farid Mammadli",
+     "44 gün": "This book tells about the stories that happened on the eve of the 44-day war.",
+     "Kötü k": "With extraordinary tension and fluidity, Seven Days in Mayis is a masterpiece full of overwhelming suspense. A work that shows how a destructive military conspiracy was made.",
+     "YAradıcı": "Farid Mammadli is the creator of this site",
+     "Who was": "Farid Mammadli is the creator of this site",
+     "You are stupid": "I think you are stupid",
+     "02,06": "You are very beautiful :)",
+     "stupid": "I think you are stupid"
+
+
+
+
+
+
+};
+
+document.getElementById('chatbot-toggle-btn').addEventListener('click', toggleChatbot);
+document.getElementById('close-btn').addEventListener('click', toggleChatbot);
+document.getElementById('send-btn').addEventListener('click', sendMessage);
+document.getElementById('user-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+});
+
+function toggleChatbot() {
+    var chatbotPopup = document.getElementById('chatbot-popup')
+    if (chatbotPopup.style.display === "block"){
+      chatbotPopup.style.display = "none";
+    }
+    else{
+      chatbotPopup.style.display = "block";
+    }
+    
+}
+
+function sendMessage() {
+    const userInput = document.getElementById('user-input').value.trim();
+    if (userInput !== '') {
+        appendMessage('user', userInput);
+        respondToUser(userInput.toLowerCase());
+        document.getElementById('user-input').value = '';
+    }
+}
+
+function respondToUser(userInput) {
+    const response = responses[userInput] || responses["default"];
+    setTimeout(function() {
+        appendMessage('bot', response);
+    }, 500);
+}
+
+function appendMessage(sender, message) {
+    const chatBox = document.getElementById('chat-box');
+    const messageElement = document.createElement('div');
+    messageElement.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
+    messageElement.innerHTML = message;
+    chatBox.appendChild(messageElement);
+    chatBox.scrollTop = chatBox.scrollHeight;
+    if (sender === 'bot' && message === responses["default"]) {
+        
+       
+        buttonYes.onclick = function() {
+            appendMessage('bot', responses["expert"]);
+        };
+        const buttonNo = document.createElement('button');
+        
+        buttonNo.onclick = function() {
+            appendMessage('bot', responses["no"]);
+        };
+        const buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('button-container');
+        buttonContainer.appendChild(buttonYes);
+        buttonContainer.appendChild(buttonNo);
+        chatBox.appendChild(buttonContainer);
+    }
+}
+        </script>
+
+</body>
+</html>
